@@ -1,4 +1,5 @@
-T"""
+
+"""
 INA250
 ------------------------
 Voltage,current and power sensor via i2c bus.
@@ -8,7 +9,6 @@ Author: L. Drees
 Version: 1.0
 Date:05/01/2022
 Based on datasheet: https://www.ti.com/lit/ds/symlink/ina260.pdf?ts=1651398339904&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FINA260
-
 
 """
 
@@ -30,7 +30,7 @@ _REG_POWER = 0x03 # POWER REGISTER (R)
 class INA260:
     """Driver for the INA260 power and current sensor.
 
-    
+
     """
 
     def __init__(self, i2cBus, address=0x40):
@@ -77,6 +77,6 @@ class INA260:
     @property
     def power(self):
         """The power being delivered to the load in mW"""
-        
+
         raw = self._issue_measurement(_REG_POWER)
         return round(raw * 10,0)
