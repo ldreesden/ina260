@@ -1,8 +1,4 @@
-# SPDX-FileCopyrightText: Bryan Siepert 2019 for Adafruit Industries
-#
-# SPDX-License-Identifier: MIT
-
-"""
+T"""
 INA250
 ------------------------
 Voltage,current and power sensor via i2c bus.
